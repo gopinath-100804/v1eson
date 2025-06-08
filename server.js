@@ -15,10 +15,11 @@ const app = express();
 // Create httpS server
 const server = http.createServer(options, app);
 const io = new Server(server, {
+  path: '/socket.io',
   cors: {
-    origin: "https://v1eson.vercel.app", // Adjust for production (e.g., specify client URL)
-    methods: ["GET", "POST"],
-  },
+    origin: "https://v1eson.vercel.app",
+    methods: ["GET", "POST"]
+  }
 });
 
 // Serve static files from 'public' directory

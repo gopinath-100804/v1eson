@@ -133,7 +133,7 @@
       .participant-tile {
         width: 100%;
         max-width: 200px;
-         max-height: 120px;
+        max-height: 120px;
       }
     }
 
@@ -1005,22 +1005,22 @@
   </div>
 
 
-<script src="https://cdn.socket.io/4.8.1/socket.io.min.js" integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+" crossorigin="anonymous"></script>
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"
+    integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+    crossorigin="anonymous"></script>
 
 
 
 
   <script>
 
-    const path = window.location.pathname.startsWith('/meet/')
-      ? '/meet/socket.io'
-      : '/socket.io';  
+
     // Initialize Socket.IO with reconnection handling
-    const socket = io({
+    const socket = io('https://v1eson.vercel.app', {
       reconnection: true,
       reconnectionAttempts: 5,
       reconnectionDelay: 1000,
-            path: path,
+      path: '/socket.io',
       reconnectionDelayMax: 5000,
       randomizationFactor: 0.5,
     });
