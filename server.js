@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(options, app);
 const io = new Server(server, {
   cors: {
-    origin: "*", // Adjust for production (e.g., specify client URL)
+    origin: "https://v1eson.vercel.app", // Adjust for production (e.g., specify client URL)
     methods: ["GET", "POST"],
   },
 });
